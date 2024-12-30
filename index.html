@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+
+
+    <style>
+
+        body
+        {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(14, 8, 19);
+            background-image: linear-gradient(lightblue, darkblue);
+        }
+
+        fieldset{
+            width: 500px;
+            border-radius: 55px;
+            border-color: rgb(5, 17, 0);
+            
+        }
+
+        h1{
+            color: rgb(12, 0, 23);
+        }
+
+        input:required{
+            border:solid;
+            border-radius: 50px;
+            border-width: 3px;
+            width:170px;
+            height: 23px;
+            border-color: rgb(10, 118, 80);
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+
+        label{
+            color: rgb(8, 1, 15);
+            font-size: 17px;
+        }
+
+        input[readonly]
+        {
+            background-color: rgba(0, 131, 174, 0.635);
+            color: bisque;
+
+        }
+
+        select{
+            background-color: rgba(194, 152, 152, 0.87);
+            width:180px;
+            
+            height: 28px;
+            border-radius:50px;
+            border-width: 3px;
+        }
+
+        input[type="radio"]:checked{
+            height: 20px;
+            width:25px;
+            background-color: red;
+            font-size: 100px;
+
+        }
+
+        input[type="radio"]:checked+label{
+            color: antiquewhite;
+        }
+
+        p{
+            display: none;
+        }
+        input[type="text"]:hover~p{
+            display: inline;
+            color:  rgb(157, 2, 2);
+            font-size: 17px;
+        }
+
+        p{
+            display: none;
+        }
+        input[type="tel"]:hover~p{
+            display: inline;
+            color:  rgb(169, 6, 6);
+            font-size: 17px;
+        }
+
+        p{
+            display: none;
+        }
+        input[type="password"]:hover~p{
+            display: inline;
+            color:  rgb(169, 6, 6);
+            font-size: 17px;
+        }
+
+        .yes,
+        .no
+        {
+            display :none;
+
+        }
+
+        input:focus:valid~.yes{
+            display:inline;
+        }
+        input:focus:valid~.no{
+            display:none;
+        }
+
+        input:focus:invalid~.no{
+            display:inline;
+        }
+
+        input:focus:invalid~.yes{
+            display:none;
+        }
+
+        
+    </style>
+</head>
+<body >
+
+    
+<form>
+    <marquee behavior="" direction="left to right"><h1>COURSE REGISTRATION FORM</h1></marquee>
+    <fieldset>
+        <legend style="color: rgb(51, 0, 105)">Personal Details</legend>
+<table>
+    <tr>
+       <td><label for="">First Name</label></td> 
+        <td><input type="text"placeholder="Ex:Nithin" name="FN" size="15" maxlength="10" required>
+        <p>Enter Your Name</p></td>
+    
+
+    <tr>
+       <td><label >SurName</label></td> 
+       <td><input style=" border:solid;
+        border-radius: 50px;
+        border-width: 3px;
+        width:170px;
+        height: 23px; border-color: rgb(163, 127, 83);"type="text"placeholder="Ex:Cm"name="SN" Optional >
+        <p>Enter Your  SurName</p></td> 
+    </tr>
+
+    <tr>
+       <td><label for="">Mobile Number</label></td> 
+        <td><input type="tel"placeholder="Ex:7022977528"name="mobile"required>
+            <p>Enter Mobile Number</p></td>
+    </tr>
+
+<tr>
+   <td><label for="">Email</label></td> 
+    <td><input type="text"placeholder="Ex:cmnithin0@gmail.com"name="mail" required><p> Enter Your Email</p>
+    <img src="yes.png" alt="" class="yes" height=17px; width=17px;>
+    <img src="no.jpeg" alt="" class="no" height=17px; width=17px;></td>
+</tr>
+
+
+<tr>
+    <td><label for="">Password</label></td>
+    <td><input type="password"placeholder="Ex:min10characters"name="password"required><p> Enter your Password</p></td>
+</tr>
+
+<tr>
+    <td><label for="">Confirm Password</label></td>
+   <td><input type="password"placeholder="Ex:min10characters"name="password" required><p> Include Atleast <br>1Uppercase,1Lowecase,1Special Character</p></td> 
+</tr>
+
+
+<tr>
+    <td><label for="">D O B</label></td>
+    <td><input type="date"name="date" required></td>
+</tr>
+
+<tr>
+    <td><label for="">Gender</label></td>
+    <td><input type="radio" name="gender" value="s"><label for="">MALE</label>
+    <input type="radio" name="gender" value="f"><label for="">FEMALE</label>
+    <input type="radio" name="gender" value="c"><label for="">Custom</label></td>
+</tr>
+<tr>
+    <td>
+        <label for="Age">Age</label></td>
+        <td><input type="number" min="18"max="100" >
+            <img src="yes.png" alt="" class="yes" height=17px; width=17px;>
+            <img src="no.jpeg" alt="" class="no"  height=17px; width=17px;></td>
+</tr>
+
+<tr>
+    <td><label for="">Select Country</label></td>
+    <td>
+        <select >
+    <option value="">INDIA</option>
+    <option value="">RUSIIA</option>
+    <option value="">SOUTH AFRICA</option>
+    <option value="">AUSTRALIA</option>
+    <option value="">ENGLAND</option>
+    </select>
+    </td>  
+</tr>
+ 
+<tr>
+   <td> <label for="">Upload Picture</label></td>
+   <td> <input   style =" border:solid;
+        border-radius: 50px;
+        border-width: 3px;
+        width:170px;
+        height: 23px;
+         border-color: rgb(1, 73, 48);" type="file"></td>
+</tr>
+
+</table>
+
+<tr>
+    <td>
+       <input style=" border:solid;
+       border-radius: 50px;
+       border-width: 3px;
+       width:100px;
+       height: 35px;
+        border-color: rgb(1, 73, 48);
+        background-color:  rgba(194, 152, 152, 0.87);" type="reset">
+    </td>
+</tr>
+</form>
+</fieldset>
+
+
+<form>
+    
+    <fieldset>
+        <legend style="color: rgb(0, 0, 0);">Course details</legend>
+<table>
+<tr>
+    <td><label for="">Select Courses</label></td>
+
+<td>
+    <select >
+    <option value="">JAVA FULL STACK</option>
+    <option value="">PYTHON FULL STACK</option>
+    <option value="">DATA STRUCTURE</option>
+    <option value="">UI/UX DESIGN</option>
+</select></td>
+</tr>
+
+<tr>
+<td><label for="">Delivery Mode</label></td>
+<td><input type="radio">OFFLINE
+<input type="radio">ONLINE 
+</td>
+</tr>
+<tr>
+    <td><label for="">Institute Name</label></td>
+    <td>
+        <input style="border:solid;
+        border-radius: 50px;
+        border-width: 3px;
+        width:170px;
+        height: 23px;
+        font-size: 15px;
+        border-color: rgb(3, 42, 28);" type="text" value="Tap Academy" readonly>
+    </td>
+    
+</tr>
+
+<tr>
+    <td><label for="">Comments</label></td>
+    <td><textarea style="
+            border-radius: 50px;
+            border-width: 3px;
+            width:17s0px;
+            height:60px;
+            background-color: rgba(226, 212, 212, 0.87);
+            border-color: rgb(3, 41, 28)
+            ;"name="" id=""></textarea></td>
+</tr>
+</tr>
+
+
+<tr>
+    
+
+<tr>
+<td><button style=" border:solid;
+    border-radius: 50px;
+    border-width: 3px;
+    width:150px;
+    height: 35px;
+     border-color: rgb(1, 73, 48);
+     background-color:  rgba(194, 152, 152, 0.87);><a href="Front-End/css.jpeg" download>click here to download</a></button></td>
+</tr>
+
+<center><td><button style=" border:solid;
+    border-radius: 50px;
+    border-width: 3px;
+    width:150px;
+    height: 45px;
+     border-color: rgb(1, 73, 48);
+     background-color:  rgba(194, 152, 152, 0.87);
+     ">SUBMIT</button></td></center>
+</table>
+
+</form>
+</fieldset>
+
+
+<!-- <iframe src="https://learn.thetapacademy.com/" frameborder="2"height="500"width="1000"></iframe>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.866285811296!2d77.60805687418193!3d12.91631448739398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6411bbb945%3A0x884e5e751a18bc1!2sTAP%20Academy%20BTM!5e0!3m2!1sen!2sin!4v1734763758523!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+
+
+</body>
+</html>
